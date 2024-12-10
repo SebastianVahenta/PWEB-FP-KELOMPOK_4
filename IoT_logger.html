@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Logger - Sensors</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <h2>IoT Logger</h2>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Dropdown untuk memilih perangkat -->
+        <label for="deviceSelect">Pilih Perangkat:</label>
+        <select id="deviceSelect" onchange="updateDeviceData()">
+            <option value="device1">Perangkat A1</option>
+            <option value="device2">Perangkat B2</option>
+        </select>
+
+        <!-- Menampilkan Data Sensor Terakhir -->
+        <h3>Data Sensor Terkini</h3>
+        <div class="sensor-cards">
+            <div class="card" id="kelembapan">
+                <h4>Kelembapan</h4>
+                <p id="humidityValue">Loading...</p>
+            </div>
+            <div class="card" id="nitrogen">
+                <h4>Nitrogen</h4>
+                <p id="nitrogenValue">Loading...</p>
+            </div>
+            <div class="card" id="phospor">
+                <h4>Phospor</h4>
+                <p id="phosporValue">Loading...</p>
+            </div>
+            <div class="card" id="kalium">
+                <h4>Kalium</h4>
+                <p id="kaliumValue">Loading...</p>
+            </div>
+            <div class="card" id="suhu">
+                <h4>Suhu</h4>
+                <p id="temperatureValue">Loading...</p>
+            </div>
+            <div class="card" id="ph">
+                <h4>pH</h4>
+                <p id="phValue">Loading...</p>
+            </div>
+            <div class="card" id="konduktivitas">
+                <h4>Konduktivitas</h4>
+                <p id="conductivityValue">Loading...</p>
+            </div>
+        </div>
+
+        <!-- Dropdown untuk memilih sensor -->
+        <label for="sensorSelect">Pilih Sensor:</label>
+        <select id="sensorSelect" onchange="updateSensorChart()">
+            <option value="humidity">Kelembapan</option>
+            <option value="nitrogen">Nitrogen</option>
+            <option value="phospor">Phospor</option>
+            <option value="kalium">Kalium</option>
+            <option value="temperature">Suhu</option>
+            <option value="ph">pH</option>
+            <option value="conductivity">Konduktivitas</option>
+        </select>
+
+        <h3>Data Seluruh Sensor</h3>
+        <canvas id="sensorChart" class="chart"></canvas>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

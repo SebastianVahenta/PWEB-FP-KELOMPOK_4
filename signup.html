@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - IoT Logger</title>
+    <link rel="stylesheet" href="css/style-login.css">
+</head>
+<body>
+    <!-- Daftar Container -->
+    <div class="auth-container">
+        <h2>Daftar</h2>
+        <form id="signupForm">
+            <label for="signupName">Name:</label>
+            <input type="text" id="signupName" placeholder="Masukan nama" required>
+
+            <label for="signupEmail">Email:</label>
+            <input type="email" id="signupEmail" placeholder="Masukan email" required>
+
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" placeholder="Masukan password" required>
+
+            <button type="button" onclick="signup()">Daftar</button>
+        </form>
+        <p>Sudah punya akun? <a href="login.html">Login disini</a></p>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
